@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMS Opt-In - HealthyOne</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #e8f5e9 0%, #ffffff 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #4CAF50, #2E7D32);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            box-shadow: 0 8px 24px rgba(76, 175, 80, 0.3);
+            color: white;
+            font-size: 36px;
+            font-weight: bold;
+        }
+        h1 {
+            font-size: 32px;
+            color: #2E7D32;
+            margin-bottom: 8px;
+        }
+        .subtitle {
+            color: #666;
+            font-size: 18px;
+        }
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        }
+        h2 {
+            color: #2E7D32;
+            font-size: 20px;
+            margin-bottom: 16px;
+        }
+        p { margin-bottom: 16px; }
+        ul { margin-left: 24px; margin-bottom: 16px; }
+        li { margin-bottom: 8px; }
+        a { color: #4CAF50; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        .consent-box {
+            background: #f5f5f5;
+            border: 2px solid #4CAF50;
+            border-radius: 12px;
+            padding: 24px;
+            margin: 20px 0;
+        }
+        .consent-box h3 {
+            color: #2E7D32;
+            margin-bottom: 12px;
+        }
+
+        .toggle-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px;
+            background: white;
+            border-radius: 8px;
+            margin: 12px 0;
+            border: 1px solid #ddd;
+        }
+        .toggle {
+            width: 50px;
+            height: 28px;
+            background: #ccc;
+            border-radius: 14px;
+            position: relative;
+            cursor: pointer;
+        }
+        .toggle.on {
+            background: #4CAF50;
+        }
+        .toggle::after {
+            content: '';
+            width: 24px;
+            height: 24px;
+            background: white;
+            border-radius: 50%;
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            transition: 0.2s;
+        }
+        .toggle.on::after {
+            left: 24px;
+        }
+
+        .disclosure {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 16px;
+            border-radius: 8px;
+            margin: 16px 0;
+            font-size: 14px;
+        }
+
+        .step {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 24px;
+            align-items: flex-start;
+        }
+        .step-number {
+            width: 32px;
+            height: 32px;
+            background: #4CAF50;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        .step-content {
+            flex: 1;
+        }
+        .step-content h4 {
+            color: #333;
+            margin-bottom: 4px;
+        }
+        .step-content p {
+            color: #666;
+            margin: 0;
+        }
+
+        .phone-mockup {
+            max-width: 280px;
+            margin: 20px auto;
+            background: #1a1a1a;
+            border-radius: 32px;
+            padding: 12px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        }
+        .phone-screen {
+            background: white;
+            border-radius: 24px;
+            padding: 20px;
+            min-height: 400px;
+        }
+        .phone-header {
+            text-align: center;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 16px;
+        }
+        .phone-header h3 {
+            color: #2E7D32;
+            font-size: 18px;
+        }
+
+        .highlight {
+            background: #e8f5e9;
+            padding: 16px;
+            border-radius: 8px;
+            border-left: 4px solid #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">H</div>
+            <h1>SMS Opt-In Process</h1>
+            <p class="subtitle">How users consent to receive SMS from HealthyOne</p>
+        </div>
+
+        <div class="card">
+            <h2>Overview</h2>
+            <p>HealthyOne provides optional SMS notifications for meal reminders and nutrition tips. Users must explicitly opt-in to receive SMS messages. This page documents our SMS consent process.</p>
+            <div class="highlight">
+                <p><strong>Key Points:</strong></p>
+                <ul>
+                    <li>SMS is completely optional - the app works fully without it</li>
+                    <li>Users must explicitly enable SMS in app settings</li>
+                    <li>Clear disclosure is shown before enabling</li>
+                    <li>Users can opt-out anytime by replying STOP or in app settings</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>SMS Opt-In Flow</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h4>User Opens Settings</h4>
+                    <p>From the app's main menu, users navigate to Settings > Notifications</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h4>SMS Toggle is OFF by Default</h4>
+                    <p>The SMS reminders option is disabled by default. Users must actively choose to enable it.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h4>Clear Disclosure Shown</h4>
+                    <p>When tapping the toggle, users see a disclosure explaining what messages they'll receive and how to opt-out.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h4>User Confirms Consent</h4>
+                    <p>User must tap "Enable SMS" to confirm. The toggle only turns on after explicit confirmation.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>In-App Consent Screen</h2>
+            <p>Here is the SMS opt-in interface users see in the HealthyOne app:</p>
+
+            <div class="phone-mockup">
+                <div class="phone-screen">
+                    <div class="phone-header">
+                        <h3>Notification Settings</h3>
+                    </div>
+
+                    <div class="toggle-row">
+                        <div>
+                            <strong>Push Notifications</strong>
+                            <div style="font-size: 12px; color: #666;">Meal reminders & tips</div>
+                        </div>
+                        <div class="toggle on"></div>
+                    </div>
+
+                    <div class="toggle-row" style="border: 2px solid #4CAF50;">
+                        <div>
+                            <strong>SMS Reminders</strong>
+                            <div style="font-size: 12px; color: #666;">Text message alerts</div>
+                        </div>
+                        <div class="toggle"></div>
+                    </div>
+
+                    <div class="disclosure">
+                        <strong>SMS Disclosure</strong><br>
+                        By enabling SMS, you agree to receive text messages from HealthyOne including meal reminders and nutrition tips. Message frequency varies. Standard message and data rates may apply. Reply STOP to unsubscribe at any time.
+                    </div>
+
+                    <div style="margin-top: 16px;">
+                        <button style="width: 100%; padding: 12px; background: #4CAF50; color: white; border: none; border-radius: 8px; font-size: 16px; cursor: pointer;">Enable SMS Reminders</button>
+                    </div>
+                    <div style="margin-top: 8px;">
+                        <button style="width: 100%; padding: 12px; background: #f5f5f5; color: #666; border: none; border-radius: 8px; font-size: 16px; cursor: pointer;">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Consent Text Shown to Users</h2>
+            <div class="consent-box">
+                <h3>SMS Consent Disclosure</h3>
+                <p>"By enabling SMS reminders, you agree to receive text messages from HealthyOne at the phone number provided. Messages may include:</p>
+                <ul>
+                    <li>Meal logging reminders</li>
+                    <li>Nutrition goal updates</li>
+                    <li>Health tips and insights</li>
+                </ul>
+                <p>Message frequency varies based on your preferences. Standard message and data rates may apply.</p>
+                <p><strong>To opt-out:</strong> Reply STOP to any message or disable SMS in app settings.</p>
+                <p><strong>For help:</strong> Reply HELP or email hardawayhealth25@gmail.com"</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Message Types</h2>
+            <p>Users who opt-in may receive these types of messages:</p>
+            <ul>
+                <li><strong>Meal Reminders:</strong> "Time to log your lunch! Open HealthyOne to track your meal."</li>
+                <li><strong>Goal Updates:</strong> "You've hit 80% of your protein goal today! Keep it up."</li>
+                <li><strong>Weekly Summary:</strong> "Your weekly nutrition summary is ready. Check your progress in the app."</li>
+            </ul>
+            <p>Message frequency: 1-3 messages per day maximum, based on user preferences.</p>
+        </div>
+
+        <div class="card">
+            <h2>Opt-Out Methods</h2>
+            <p>Users can stop receiving SMS messages at any time:</p>
+            <ul>
+                <li><strong>Reply STOP</strong> to any message</li>
+                <li><strong>In-App:</strong> Settings > Notifications > Disable SMS Reminders</li>
+                <li><strong>Email:</strong> Contact hardawayhealth25@gmail.com</li>
+            </ul>
+            <p>After opting out, users receive one final confirmation message and no further SMS will be sent.</p>
+        </div>
+
+        <div class="card">
+            <h2>Data Protection</h2>
+            <ul>
+                <li>Phone numbers are stored securely and encrypted</li>
+                <li>Phone numbers are never sold or shared with third parties</li>
+                <li>SMS is delivered via Twilio's secure platform</li>
+                <li>Users can request deletion of their phone number at any time</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Contact Information</h2>
+            <p><strong>Company:</strong> Hardaway Labs</p>
+            <p><strong>App:</strong> HealthyOne - AI Nutrition Tracker</p>
+            <p><strong>Email:</strong> <a href="mailto:hardawayhealth25@gmail.com">hardawayhealth25@gmail.com</a></p>
+            <p><strong>Website:</strong> <a href="https://hardawaylabs.com">hardawaylabs.com</a></p>
+        </div>
+
+        <div class="card">
+            <h2>Related Policies</h2>
+            <p>
+                <a href="privacy.html">Privacy Policy</a> |
+                <a href="sms-privacy.html">SMS Privacy Policy</a> |
+                <a href="terms.html">Terms of Service</a> |
+                <a href="about.html">About Us</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
